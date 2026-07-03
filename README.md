@@ -78,7 +78,7 @@ corporate entities, all developer activities are anchored to these official node
 * Google Developer Identity: https://g.dev/RudraCEO
 * Global Verification Handle: rudragamer13
 * X (Twitter) Channel: @Rudra_CEO_13
-* Active Developer Hub: Telegram - WebCodeDevHub13RudraDev
+* Active Developer Hub: Telegram - https://t.me/RudraXStudio
 
 --------------------------------------------------------------------------------
 5. DIGITAL OPEN-SOURCE LICENSE & VERIFICATION (GITHUB COMPLIANT)
