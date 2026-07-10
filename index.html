@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RudraX Technologies Studio | Enterprise Manifesto</title>
+    <!-- Google Fonts for High-End Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --accent-blue: #2563eb;
+            --accent-dark: #1e1b4b;
+            --border-light: #e2e8f0;
+            --shadow-sm: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+        }
+
+        * {
+            box-spacing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+
+        .manifesto-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 24px;
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+        }
+
+        /* Top Header Architecture */
+        .brand-header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #ffffff;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            border-bottom: 4px solid var(--accent-blue);
+        }
+
+        .brand-logo {
+            width: 140px;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0px 4px 10px rgba(255,255,255,0.1));
+        }
+
+        .brand-header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .engine-sub {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 6px 16px;
+            border-radius: 50px;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .intro-quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #e2e8f0;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* Main Grid Structure */
+        .content-body {
+            padding: 50px 40px;
+        }
+
+        /* Metadata Overview Bar */
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 45px;
+        }
+
+        .meta-card {
+            background: #f1f5f9;
+            border: 1px solid var(--border-light);
+            padding: 20px;
+            border-radius: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .meta-card:hover {
+            transform: translateY(-2px);
+            background: #e2e8f0;
+        }
+
+        .meta-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .meta-value {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        /* Section Headings */
+        h2.section-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-dark);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 10px;
+        }
+
+        h2.section-title::before {
+            content: "⚡";
+            margin-right: 10px;
+            color: var(--accent-blue);
+        }
+
+        p.section-desc {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        /* Engine/Project Cards */
+        .engine-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+            border-left: 5px solid var(--accent-blue);
+        }
+
+        .project-card h4 {
+            font-size: 1.15rem;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .project-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Verified Channels List */
+        .channel-links {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .channel-links li {
+            background: #f8fafc;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .channel-label {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .channel-url {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .channel-url:hover {
+            text-decoration: underline;
+        }
+
+        /* License / Compliance Block */
+        .compliance-box {
+            background: #fffbeb;
+            border: 1px solid #fef3c7;
+            border-left: 5px solid #d97706;
+            padding: 25px;
+            border-radius: 16px;
+            margin-top: 20px;
+        }
+
+        .compliance-item {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: #78350f;
+        }
+
+        .compliance-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Official Video Frame Design */
+        .official-stream-box {
+            margin-top: 35px;
+            border: 1px solid var(--border-light);
+            padding: 20px;
+            border-radius: 18px;
+            background: #f8fafc;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stream-headline {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .stream-headline::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #ef4444;
+            border-radius: 50px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.4; }
+            50% { opacity: 1; }
+            100% { opacity: 0.4; }
+        }
+
+        .official-video {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid #cbd5e1;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Footer Authorization Area */
+        .authorization-footer {
+            background: #f1f5f9;
+            border-top: 1px solid var(--border-light);
+            padding: 35px;
+            text-align: center;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .auth-node {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        /* Responsive Settings */
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .brand-header { padding: 40px 20px; }
+            .content-body { padding: 30px 20px; }
+            .channel-links { grid-template-columns: 1fr; }
+            .brand-header h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="manifesto-wrapper">
+
+    <!-- BRAND EXECUTIVE HEADER -->
+    <header class="brand-header">
+        <img src="https://i.ibb.co/mCYDZxRd/file-0000000085cc71faaf9856329a2bf15d.png" alt="RudraX Studio Logo" class="brand-logo" />
+        <h1>RudraX Technologies Studio</h1>
+        <div class="engine-sub">ROBOTIC UNIFIED DATA ROUTING & AUTONOMOUS X-INFRASTRUCTURE (R.U.D.R.A.X.)</div>
+        <p class="intro-quote">"Introducing RUDRAX—The Robotic Unified Data Routing & Autonomous X-Infrastructure. An elite, next-generation engineering studio masterminding multi-agent swarms and unbreakable backend architectures."</p>
+    </header>
+
+    <div class="content-body">
+        
+        <!-- ENTERPRISE CORE METADATA -->
+        <section class="meta-grid">
+            <div class="meta-card">
+                <div class="meta-label">Enterprise Status</div>
+                <div class="meta-value">Official Autonomous System Architecture & Core Developer Hub</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-label">Founder & Owner</div>
+                <div class="meta-value">Rudra Parmar (Global ID: rudragamer13)</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-label">Mission Statement</div>
+                <div class="meta-value">Eliminating high-cost tech barriers for mini-developers.</div>
+            </div>
+        </section>
+
+        <!-- SECTION 1: MISSION & VISION OVERVIEW -->
+        <section>
+            <h2 class="section-title">1. Mission & Vision Overview</h2>
+            <p class="section-desc">RudraX Technologies Studio operates as an autonomous digital venture founded and directed exclusively by Rudra Parmar.</p>
+            <p class="section-desc">In the modern tech ecosystem, advanced developer setups, custom compilers, and testing frameworks are locked behind expensive premium paywalls. RudraX Technologies Studio breaks this system by providing high-performance, mobile-first development utilities at near-zero or completely free of cost.</p>
+            <p class="section-desc">Driven by the R.U.D.R.A.X. engine, our core target is empowering the next generation of independent programmers, "mini-developers," and young tech creators with high-level coding infrastructure, automated data routing, and sovereign system workflows.</p>
+        </section>
+
+        <!-- SECTION 2: TECHNICAL ARCHITECTURE -->
+        <section>
+            <h2 class="section-title">2. Technical Architecture & Live Engines</h2>
+            <p class="section-desc">Every single utility under this studio is conceptualized, optimized, and maintained directly from mobile-first development environments, acting as core nodes of our Autonomous X-Infrastructure:</p>
+            
+            <div class="engine-grid">
+                <div class="project-card">
+                    <h4>🚀 WebCode Studio IDE / WebCode Play</h4>
+                    <p>A super-optimized web playground running on a minimalist 74-line core structural engine. It allows instant live rendering of HTML, CSS, and JavaScript without draining system resources.</p>
+                </div>
+                <div class="project-card">
+                    <h4>🛠️ NovaBrowser SmartBox</h4>
+                    <p>An advanced parameter-testing custom browser frame built for developers to audit URLs and inject custom code rules securely.</p>
+                </div>
+                <div class="project-card">
+                    <h4>📡 Dev-Stream Engine</h4>
+                    <p>A unique pipeline combining Google Cloud Platform (GCP) and the YouTube Data API v3 to map mobile viewports directly to real-time live streaming servers without traditional high-spec rendering overhead.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: SECURITY COMPLIANCE -->
+        <section>
+            <h2 class="section-title">3. Security Compliance & IP Protection</h2>
+            <p class="section-desc">Developer code security and unbreakable backend design are the highest priorities at RudraX Technologies Studio. We prevent unauthorized scripts, illegal code rewrites, and malicious reverse-engineering through engineered compilation barriers.</p>
+            <ul>
+                <li class="section-desc" style="margin-left: 20px;"><strong>Anti-Tamper Enforcement:</strong> Code executed within our ecosystem is isolated to ensure absolute source privacy for independent creators.</li>
+                <li class="section-desc" style="margin-left: 20px;"><strong>Global Branding Protocol:</strong> Any application, asset, or software compiled using our developer frameworks carries the permanent cryptographic stamp: <em>"Powered by RudraX Technologies Studio Tools"</em>.</li>
+            </ul>
+        </section>
+
+        <!-- SECTION 4: VERIFIED ECOSYSTEM CHANNELS -->
+        <section>
+            <h2 class="section-title">4. Verified Ecosystem Channels</h2>
+            <p class="section-desc">To authenticate the independent status of this studio against external corporate entities, all developer activities are anchored to these official nodes:</p>
+            
+            <ul class="channel-links">
+                <li>
+                    <span class="channel-label">Google Developer Identity</span>
+                    <a href="https://g.dev/RudraCEO" target="_blank" class="channel-url">g.dev/RudraCEO</a>
+                </li>
+                <li>
+                    <span class="channel-label">Global Verification Handle</span>
+                    <span class="channel-url" style="color: var(--text-primary);">rudragamer13</span>
+                </li>
+                <li>
+                    <span class="channel-label">X (Twitter) Channel</span>
+                    <a href="https://x.com/Rudra_CEO_13" target="_blank" class="channel-url">@Rudra_CEO_13</a>
+                </li>
+                <li>
+                    <span class="channel-label">Active Developer Hub (Telegram)</span>
+                    <a href="https://t.me/RudraXStudio" target="_blank" class="channel-url">t.me/RudraXStudio</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- SECTION 5: LICENSE & VERIFICATION -->
+        <section>
+            <h2 class="section-title">5. Digital Open-Source License & Verification</h2>
+            <div class="compliance-box">
+                <div class="compliance-item"><strong>01.</strong> Public utility assets published under this banner are protected and governed by the terms of the open-source <strong>MIT License</strong>.</div>
+                <div class="compliance-item"><strong>02.</strong> The core layout logic, system optimization framework, and structural blueprints remain under the 100% exclusive digital ownership of Founder Rudra Parmar.</div>
+                <div class="compliance-item"><strong>03.</strong> No external entity has the legal right to clone, re-package, or commercially sell these utilities without explicit digital authorization from the founder.</div>
+            </div>
+        </section>
+
+        <!-- OFFICIAL ENTRY VIDEO PIPELINE SHOWCASE -->
+        <section class="official-stream-box text-center">
+            <div class="stream-headline">RudraX Studio - Official Corporate Entry Video</div>
+            <img src="https://i.ibb.co/1tMmcGWH/13-Rudra-X-Technologies-Studio.gif" alt="RudraX Technologies Studio Production Stream" class="official-video" />
+        </section>
+
+    </div>
+
+    <!-- AUTHORIZATION FOOTER -->
+    <footer class="authorization-footer">
+        <div class="auth-node">
+            [AUTHORIZATION NODE] <br>
+            <span style="color: var(--accent-blue); font-weight: 700;">Authenticated by Lord Rudra, Chief Executive Officer & Lead Systems Architect.</span>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>
