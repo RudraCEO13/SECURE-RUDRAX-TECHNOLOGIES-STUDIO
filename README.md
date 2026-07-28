@@ -81,15 +81,16 @@ corporate entities, all developer activities are anchored to these official node
 * Active Developer Hub: Telegram - https://t.me/RudraXStudio
 
 --------------------------------------------------------------------------------
-5. DIGITAL OPEN-SOURCE LICENSE & VERIFICATION (GITHUB COMPLIANT)
+5. DIGITAL PROPRIETARY LICENSE & RIGHTS (GITHUB ENFORCED)
 --------------------------------------------------------------------------------
-This document serves as an official declaration of independent production rights:
-1. Public utility assets published under this banner are protected and governed
-   by the terms of the open-source MIT License.
+This document serves as an official declaration of exclusive proprietary rights:
+1. Public utility assets, codebase, and frameworks published under this banner 
+   are strictly governed under a All Rights Reserved Proprietary License.
 2. The core layout logic, system optimization framework, and structural blueprints
    remain under the 100% exclusive digital ownership of Founder Rudra Parmar.
-3. No external entity has the legal right to clone, re-package, or commercially
-   sell these utilities without explicit digital authorization from the founder.
+3. No external entity has the legal right to clone, re-package, redistribute, 
+   or commercially sell these utilities without explicit written digital 
+   authorization from the founder. Unauthorized usage will face instant DMCA takedown.
 
 ================================================================================
 [AUTHORIZATION NODE] 
